@@ -43,6 +43,9 @@ const cifrado = (mensaje, posicion)=>{
     else if (mensaje.charCodeAt(i)>=97 && mensaje.charCodeAt(i)<=122){
       cifrar = (((mensaje.charCodeAt(i)-97) + posicion) % 26) + 97;
     }
+    else if (mensaje.charCodeAt(i)===32){   /////ESPACIOS VAN ANTES QUE LOS CARACTERS ESPECIALES POR LA JERARQUIA O ALGO ASI
+      cifrar = 32;
+    }
     ///Caracteres Especiales
 
     else if (mensaje.charCodeAt(i)>=32 && mensaje.charCodeAt(i)<=64){
@@ -53,4 +56,11 @@ const cifrado = (mensaje, posicion)=>{
   }
   return resultado;
 }
+
 console.log(cifrado("Que onda ", 3));
+
+const usImp = encripta()
+function encripta(){
+  var hoho = document.getElementById("hola").value;
+  document.getElementById("resEnc").innerHTML=(cifrado(hoho),3);
+}
