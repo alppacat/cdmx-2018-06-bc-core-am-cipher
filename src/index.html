@@ -6,23 +6,49 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <h1>Código César</h1>
     <section id="ingreso">
       Ingresa texto a cifrar
       <br>
+
+                <!--Ingreso de texto por el usuario y cifrar-->
       <div id="ingreso2">
 
+  <textarea type="text" id="userText"  placeholder="Ingresa tu texto "></textarea>
+<button type="button" onclick="encripta()" name="button">Encripta</button>
 
-      <input type="text" name="" value="">
-      <button type="button" onclick="encripta()"> Encripta </button>
       </div>
+
+                <!--fin texto usuario-->
+
+                <!--Descrifrar-->
 
       <div id="ingreso3">
         <br>
         Ingresa texto a descifrar
         <br>
-        <input type="text" name="" value="">
-      <button type="button" onclick="descifra()"> Descifra </button>
+        <textarea type="text" id="userOut"  placeholder="Descifra"></textarea>
+      <button type="button" onclick="descifra()" name="button"> Descifrado </button>
+
+      </div>
+            <!--Final descifrar-->
+
+            <!--Output de mensaje cifrado -->
+      <div>
+      <p id="messageCipher"> Mensaje Cifrado </p>
+
+    </div>
+
+    <!--output-->
+    <!--Mensaje descrifrado-->
+    <div>
+    <p id="messageDesCipher"> Mensaje secreto </p>
+
+  </div>
+
+
+
+    </section>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>

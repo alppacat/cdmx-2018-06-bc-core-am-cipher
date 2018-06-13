@@ -1,66 +1,68 @@
-// // window.cipher = {
-//   offset:35, function(offset, )
-//   encriptar:
-//   // ...
-//   desencriptar:
-// };
-// window.cipher = {
-// let mensaje=document.getElementById("mensaje").value;
-// let posiciones=document.getElementById("posiciones").value;
-//    function encode(posiciones,mensaje){
-//     let resultado = ""; //code;
-//     let codigo = resultado;
-//   for (let i=0; i<mensaje.length;i++){
-//     if (mensaje.charCodeAt(i)>=65 && mensaje.charCodeAt(i)<=90){
-//       codigo = (((mensaje.charCodeAt(i)-65)+posiciones)%26)+65;
-//     }
-//     else if (mensaje.charCodeAt(i)>=97 && mensaje.charCodeAt(i)<=122){
-//       codigo = (((mensaje.charCodeAt(i)-97)+posiciones)%26)+97;
-//     }
-//     else if (mensaje.charCodeAt(i)>=32 && mensaje.charCodeAt(i)<=64){
-//       codigo = (((mensaje.charCodeAt(i)-32)+posiciones)%26)+32;
-//     }
-//     resultado=resultado+String.fromCharCode(codigo);
-//   }
-//   return resultado;
-// }
-// console.log(encode(posiciones,mensaje));
-// };
-///UpperCase Letters fins de 65 a 90
-///LowerCase Letters fins de 97 a 122
+window.cipher = {
 
+};
+const cifrado = (string, offset)=>{
+  let result = "";
+  let cifrar = result;
 
-const cifrado = (mensaje, posicion)=>{
-  let resultado = "";
-  let cifrar = resultado;                   ///Se re asigna el valor a la variable
-  for (let i = 0; i < mensaje.length; i++){     //para poder operar después y no hacerlo con un string vacío
-
+  for (let i = 0; i < string.length; i++){
+  let charCodigo = string.charCodeAt(i);
     ///MAYUS: A
-    if (mensaje.charCodeAt(i)>=65 && mensaje.charCodeAt(i)<=90){
-      cifrar = (((mensaje.charCodeAt(i)-65) + posicion) % 26)+65;
+    if (charCodigo >= 65 && charCodigo <= 90){
+      cifrar = (((charCodigo - 65) + offset) % 26) + 65;
     }
     ///minus: a
-    else if (mensaje.charCodeAt(i)>=97 && mensaje.charCodeAt(i)<=122){
-      cifrar = (((mensaje.charCodeAt(i)-97) + posicion) % 26) + 97;
+    else if (charCodigo >= 97 && charCodigo <= 122){
+      cifrar = (((charCodigo - 97) + offset) % 26) + 97;
     }
-    else if (mensaje.charCodeAt(i)===32){   /////ESPACIOS VAN ANTES QUE LOS CARACTERS ESPECIALES POR LA JERARQUIA O ALGO ASI
+    else if (charCodigo === 32){
       cifrar = 32;
     }
     ///Caracteres Especiales
 
-    else if (mensaje.charCodeAt(i)>=32 && mensaje.charCodeAt(i)<=64){
-      cifrar = (((mensaje.charCodeAt(i) - 32)+posicion) % 26) + 32;
+    else if (charCodigo >= 32 && charCodigo <= 64){
+      cifrar = (((charCodigo - 32) + offset) % 26) + 32;
     }
-    resultado= resultado + String.fromCharCode(cifrar); /// String.fromCharCode() convierte un
-                                            //caracter unicode/numero a un caracter
+    result = result + String.fromCharCode(cifrar);
+
   }
-  return resultado;
+  return result;
+}
+///Cambiar esta function a arrow function
+const descifrado = (string, offset)=>{
+  let result2 = "";
+  let descifrar = result2;
+
+  for (let i = 0; i < string.length; i++){
+    let charCodigo = string.charCodeAt(i);
+    ///MAYUS: A
+    if (charCodigo >= 65 && charCodigo <= 90){
+      descifrar = (((charCodigo - 65) - offset + 26) % 26) + 65;
+    }
+    ///minus: a
+    else if (charCodigo >= 97 && charCodigo <= 122){
+      descifrar = (((charCodigo - 97) - offset + 26) % 26) + 97;
+    }
+    else if (charCodigo === 32){
+      descifrar = 32;
+    }
+    ///Caracteres Especiales
+
+    else if (charCodigo >= 32 && charCodigo <= 64){
+      descifrar = (((charCodigo - 32) - offset + 26) % 26) + 32;
+    }
+    result2 = result2 + String.fromCharCode(descifrar);
+
+  }
+  return result2;
 }
 
-console.log(cifrado("Que onda ", 3));
-
-const usImp = encripta()
 function encripta(){
-  var hoho = document.getElementById("hola").value;
-  document.getElementById("resEnc").innerHTML=(cifrado(hoho),3);
+  let userText = document.getElementById("userText").value;
+  document.getElementById("messageCipher").innerHTML = "Tu mensaje cifrado es " + cifrado(userText, 15);
 }
+
+  function descifra(){
+    let userOut = document.getElementById("userOut").value;
+    document.getElementById("messageDesCipher").innerHTML = "Tu mensaje Descifrado es " + descifrado(userOut, 15);
+  }
