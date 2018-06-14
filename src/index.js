@@ -6,14 +6,20 @@ const messageDesCipher = document.getElementById("messageDesCipher");
 const button1 = document.getElementById("button1");
 const button2 = document.getElementById("button2");
 
-button1.addEventListener("click", encripta){
-  window.cipher.encode(userText.value, offset);
-  messageCipher.innerHTML = "Tu mensaje cifrado es " + userText;
-  console.log(window.cipher.encode(userText.value, offset));
-};
+function encripta() {
+  let valor = userText.value;
+  messageCipher.innerHTML = window.cipher.encode(valor);
+  console.log();
+
+}
+
+button1.addEventListener("click",encripta);
 
 
   function descifra(){
-
+    let valor = userOut.value;
+    messageDesCipher.innerHTML = window.cipher.decode(valor);
 
   }
+
+button2.addEventListener("click",descifra);

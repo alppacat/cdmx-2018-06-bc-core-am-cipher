@@ -1,12 +1,12 @@
+const offset = 33;
 window.cipher = {
-  encode: (string, offset) => {
-    let offset = 33;
+  encode(string) {
     let result = "";
     let cifrar = result;
 
     for (let i = 0; i < string.length;i++){
     let charCodigo = string.charCodeAt(i);
-      ///MAYUS: A
+      //MAYUS: A
       if (charCodigo >= 65 && charCodigo <= 90){
         cifrar = (((charCodigo - 65) + offset) % 26) + 65;
       }
@@ -27,8 +27,7 @@ window.cipher = {
     }
     return result;
 },
-  decode: () => {
-   let offset = 33;
+  decode(string) {
    let result2 = "";
    let descifrar = result2;
 
@@ -54,6 +53,6 @@ window.cipher = {
 
    }
    return result2;
- },
+ }
 
 }
