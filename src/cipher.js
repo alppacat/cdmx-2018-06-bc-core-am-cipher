@@ -2,6 +2,7 @@ container.style.display = "none";
 hh1.style.display = "none";
 
 function buttonWelcome() {
+  loader.style.display = "none";
   animations.style.display ="none";
   container.style.display = "flex";
   hh1.style.display = "block";

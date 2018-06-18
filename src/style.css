@@ -163,6 +163,34 @@ border: black solid 1px;
 text-align: center;
 
 }
+#loader{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow:hidden;
+
+}
+.loader-div {
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border: 8px solid #ffc61a;
+  border-top: 8px solid #09f;
+  border-radius: 55%;
+  animation: rotate 6s linear infinite;
+}
+@keyframes rotate {
+  40%{
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+
+}
 @keyframes text {
   0%{
     color: #09f;
