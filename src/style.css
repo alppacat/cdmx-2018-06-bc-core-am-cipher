@@ -16,7 +16,8 @@ aside{
   flex:2;
   text-align: justify;
   border-radius: 50px;
-  background-color: #393946;
+  border: #77ACD6 solid 1px;
+  background-color: #191919;
   overflow: hidden;
   padding: 30px;
   font-family: 'Tajawal', sans-serif;
@@ -26,6 +27,7 @@ aside{
 #container{
   display: flex;
   border-radius: 50px;
+  border: #77ACD6 solid 1px;
   background-color: #393946;
   justify-content: center;
   /* justify-content: center; */
@@ -123,7 +125,7 @@ border: black solid 1px;
 
 .text2{
   margin-top: 0px;
-  font-size: 35px;
+  font-size: 30px;
   color: #09f;
   font-family: 'Anton', sans-serif;
   margin-bottom: 0px;
@@ -135,7 +137,7 @@ border: black solid 1px;
   background-color: #0d161f;
   border: solid #ffc61a 2px;
   border-radius: 15px;
-  padding: 5px 15px;
+  padding: 3px 10px;
   box-shadow: 0 2px #999;
   font-family: 'Tajawal', sans-serif;
 }
@@ -151,12 +153,20 @@ border: black solid 1px;
 #textflex{
   display: flex;
   text-align: justify;
+  color: white;
+  background-color: #0d161f;
+  padding: 20px;
+  border-radius: 10px;
+  border: #77ACD6 solid 2px;
+}
+#imageCake{
+text-align: center;
 
 }
 @keyframes text {
   0%{
     color: #09f;
-    margin-bottom: -80px;
+    margin-bottom: -70px;
   }
     30%{
       letter-spacing: 25px;
