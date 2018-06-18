@@ -1,46 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <title></title>
   </head>
   <body>
-    <h1>Código César</h1>
-    <section id="ingreso">
-      Ingresa texto a cifrar
-      <br>
+    <div id="animations">
+    <h1 id="welcome">
+    <p class="text1">aperture</p>
+    <p class="text2">science innovators</p>
+    <button type="button" id="initialButton" onclick="buttonWelcome()"name="button">Click to enter</button>
 
-                <!--Ingreso de texto por el usuario y cifrar-->
-      <div id="ingreso2">
-
-  <textarea type="text" id="userText"  placeholder="Ingresa tu texto "></textarea>
-<button type="button" id="button1" name="button">Encripta</button>
-
-      </div>
-                <!--Descrifrar-->
-      <div id="ingreso3">
-        <br>
-        Ingresa texto a descifrar
-        <br>
-        <textarea type="text" id="userOut"  placeholder="Descifra"></textarea>
-      <button type="button" id="button2" name="button"> Descifrado </button>
-
-      </div>
-            <!--Output de mensaje cifrado -->
-      <div>
-      <p id="messageCipher"> Mensaje Cifrado </p>
-
+    </h1>
     </div>
-    <!--Mensaje descrifrado-->
-    <div>
-    <p id="messageDesCipher"> Mensaje secreto </p>
+    <main id="container">
 
-  </div>
-
-
-
-    </section>
+      <div id="boxDesciph">
+        <p class="textTitl">Encode text</p>
+        <textarea type="text" id="userText" rows="7" cols="30" placeholder="Your text goes here "></textarea>
+        <br>
+        <div class="buttalign">
+        <button type="button" id="button1" name="button"> Encode </button>
+        </div>
+        <div class="textrece">
+          <p id="messageCipher"> Encoded message: </p>
+        </div>
+      </div>
+      <div id="boxCiph">
+        <p class="textTitl">Decode text</p>
+        <textarea type="text" id="userOut" rows="7" cols="30" placeholder=" Decode your text "></textarea>
+        <br>
+        <div class="buttalign">
+        <button type="button" id="button2" name="button">Decode</button>
+        </div>
+        <div class="textrece">
+        <p id="messageDesCipher"> Decoded message: </p>
+        </div>
+      </div>
+    </main>
+    <aside id="hh1">
+      <h1 id="congrats">Congratulations aspirant!</h1>
+      <p id="textflex">Good work getting this far, future-starter! That said, if you are simple-minded, old, or irradiated in such a way that the future should not start with you, please return to your primitive tribe and send back someone better-qualified for testing. To start you'll first need to write down the encripted message you've recived and follow the instructions. This kind of precautions are needed to avoid our employees getting into the testing chambers, not like there's something wrong with the chambers, we just don't want them there. And remember, there's free cake!</p>
+    </aside>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>

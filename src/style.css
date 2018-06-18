@@ -1,0 +1,169 @@
+html,body{
+  margin: 0px;
+  height: 100%;
+}
+body{
+  display: flex;
+  background-color: #0d161f;
+
+}
+main{
+  flex: 4;
+  overflow: hidden;
+
+}
+aside{
+  flex:2;
+  text-align: justify;
+  border-radius: 50px;
+  background-color: #393946;
+  overflow: hidden;
+  padding: 30px;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: bold;
+}
+
+#container{
+  display: flex;
+  border-radius: 50px;
+  background-color: #393946;
+  justify-content: center;
+  /* justify-content: center; */
+}
+#boxCiph{
+  order: 1;
+
+  /* display: none; */
+
+}
+#boxDesciph{
+  order: 2;
+  /* display: none; */
+}
+#congrats{
+  font-family: 'Anton', sans-serif !important;
+  font-size: 30px;
+  color: #ffc61a;
+  text-align: center;
+  letter-spacing: 2px;
+  text-align: center !important;
+  text-shadow: 2px 2px 8px black;
+
+}
+.textTitl{
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #ffc61a;
+  text-align: center;
+  font-weight:lighter;
+  text-shadow: 2px 2px 8px black;
+}
+#button1,#button2{
+  color: white;
+  background-color: #0d161f;
+  border: solid #ffc61a 2px;
+  border-radius: 15px;
+  padding: 5px 15px;
+  box-shadow: 0 2px #999;
+  font-family: 'Tajawal', sans-serif;
+}
+.buttalign{
+  text-align: center;
+}
+#button1:hover,#button2:hover{
+  background-color: #09f;
+}
+#button1:active, #button2:active{
+  background-color: #09f;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.textrece{
+display:flex;
+background-color: #0d161f;
+border-radius: 15px;
+width: 230px;
+height: 300px;
+text-align: center;
+margin-top: 20px;
+border: black solid 1px;
+}
+
+#messageCipher,#messageDesCipher{
+  text-align: center;
+  font-family: 'Tajawal', sans-serif;
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+#animations{
+  text-align: center;
+  position: absolute;
+  margin-top: 0%;
+  /* translate(-50%, -50%); */
+  width: 100%;
+  display: block;
+
+}
+ .text1{
+  color: #ffc61a;
+  background-color: #0d161f;
+  font-size: 180px;
+  font-weight: 500;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 5px;
+  margin-bottom: 0px;
+  position: relative;
+  animation: text 5s 1;
+  margin-top: 5%;
+
+}
+
+.text2{
+  margin-top: 0px;
+  font-size: 35px;
+  color: #09f;
+  font-family: 'Anton', sans-serif;
+  margin-bottom: 0px;
+
+}
+
+#initialButton{
+  color: white;
+  background-color: #0d161f;
+  border: solid #ffc61a 2px;
+  border-radius: 15px;
+  padding: 5px 15px;
+  box-shadow: 0 2px #999;
+  font-family: 'Tajawal', sans-serif;
+}
+#initialButton:hover{
+  background-color: #09f;
+}
+#initialButton:active{
+  background-color: #09f;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+#textflex{
+  display: flex;
+  text-align: justify;
+
+}
+@keyframes text {
+  0%{
+    color: #09f;
+    margin-bottom: -80px;
+  }
+    30%{
+      letter-spacing: 25px;
+      margin-bottom: -120px;
+      }
+  80%{
+    letter-spacing: 8px;
+    margin-bottom: -120px;
+  }
+  }
