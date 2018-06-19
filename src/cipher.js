@@ -1,21 +1,7 @@
-container.style.display = "none";
-hh1.style.display = "none";
-
-function buttonWelcome() {
-  loader.style.display = "none";
-  animations.style.display ="none";
-  container.style.display = "flex";
-  hh1.style.display = "block";
-  // loader.style.display= "none";
-
-  // titlepage.style.display = "block";
-  // ingreso.style.display= "block";
-
-}
 
 const offset = 33;
 window.cipher = {
-  encode: (string) => {
+  encode: (offset, string) => {
     let result = "";
     let cifrar = result;
 
@@ -44,7 +30,7 @@ window.cipher = {
 
 
 },
-  decode: (string) => {
+  decode: (offset, string) => {
    let result2 = "";
    let descifrar = result2;
 

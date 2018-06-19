@@ -33,13 +33,13 @@ aside{
   /* justify-content: center; */
 }
 #boxCiph{
-  order: 1;
+  order: 2;
 
   /* display: none; */
 
 }
 #boxDesciph{
-  order: 2;
+  order: 1;
   /* display: none; */
 }
 #congrats{
