@@ -12,14 +12,8 @@ button2.addEventListener('click', event => {
   document.getElementById('messageDesCipher').innerHTML = results2;
 });
 
-container.style.display = 'none';
-hh1.style.display = 'none';
-
 function buttonWelcome() {
-  loader.style.display = 'none';
-  animations.style.display = 'none';
-  container.style.display = 'flex';
-  hh1.style.display = 'block';
+ window.location.assign('../src/views/index.html');
   // loader.style.display= "none";
 
   // titlepage.style.display = "block";
