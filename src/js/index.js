@@ -13,9 +13,5 @@ button2.addEventListener('click', event => {
 });
 
 function buttonWelcome() {
- window.location.assign('../src/views/index.html');
-  // loader.style.display= "none";
-
-  // titlepage.style.display = "block";
-  // ingreso.style.display= "block";
+  window.location.assign('../src/views/index.html');
 }
