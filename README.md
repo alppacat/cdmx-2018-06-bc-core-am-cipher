@@ -6,7 +6,7 @@ Just wait for our encrypted message to use it. It's not that hard.
 If you decide to participate in our tests, please follow the instructions.
 
 <p align="center">
-  <img src="src/cave.jpg" width="300" height="330">
+  <img src="src/img/cave.jpg" width="300" height="330">
 </p>
 
 
